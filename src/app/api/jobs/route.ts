@@ -1,81 +1,72 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 // Mock function to simulate fetching jobs from an external API
 async function fetchJobsFromExternalAPI() {
   return [
     {
-      title: "Senior Software Engineer",
-      company: "TechCorp",
+      title: "Graduate Engineer Trainee",
+      company: "Lenovo",
       type: "Full-time",
-      experience: "5+ years",
-      location: "San Francisco, CA",
-      link: "https://techcorp.com/careers/senior-software-engineer"
+      experience: "Freshers",
+      location: "Bangalore",
+      link: "https://lenovo.com/careers/graduate-engineer-trainee",
     },
     {
-      title: "Data Scientist",
-      company: "AI Innovations",
+      title: "Test Engineer",
+      company: "Ingersoll Rand",
       type: "Full-time",
-      experience: "3-5 years",
-      location: "New York, NY",
-      link: "https://ai-innovations.com/careers/data-scientist"
+      experience: "Freshers",
+      location: "Bangalore",
+      link: "https://ingersollrand.com/careers/test-engineer",
     },
     {
-      title: "UX/UI Designer",
-      company: "DesignMasters",
-      type: "Contract",
-      experience: "2-4 years",
-      location: "Remote",
-      link: "https://designmasters.com/careers/ux-ui-designer"
-    },
-    {
-      title: "DevOps Engineer",
-      company: "CloudSolutions",
+      title: "Core Staff Auditor",
+      company: "EY",
       type: "Full-time",
-      experience: "4+ years",
-      location: "Seattle, WA",
-      link: "https://cloudsolutions.io/careers/devops-engineer"
+      experience: "Freshers",
+      location: "Kolkata",
+      link: "https://ey.com/careers/core-staff-auditor",
     },
     {
-      title: "Product Manager",
-      company: "InnovateTech",
+      title: "Mechanical Engineer",
+      company: "Adani Group",
       type: "Full-time",
-      experience: "3-6 years",
-      location: "Austin, TX",
-      link: "https://innovatetech.com/careers/product-manager"
+      experience: "Freshers",
+      location: "Ahmedabad",
+      link: "https://adani.com/careers/mechanical-engineer",
     },
     {
-      title: "Full Stack Developer",
-      company: "WebWizards",
-      type: "Part-time",
-      experience: "2+ years",
-      location: "Chicago, IL",
-      link: "https://webwizards.dev/careers/full-stack-developer"
-    },
-    {
-      title: "Marketing Specialist",
-      company: "BrandBoost",
+      title: "Purchasing Associate",
+      company: "Volvo India",
       type: "Full-time",
-      experience: "1-3 years",
-      location: "Los Angeles, CA",
-      link: "https://brandboost.com/careers/marketing-specialist"
+      experience: "Freshers",
+      location: "Bangalore",
+      link: "https://volvogroup.com/careers/purchasing-associate",
     },
     {
-      title: "Cybersecurity Analyst",
-      company: "SecureNet",
+      title: "Customer Service Executive",
+      company: "HCL Technologies",
       type: "Full-time",
-      experience: "3-5 years",
-      location: "Washington, D.C.",
-      link: "https://securenet.com/careers/cybersecurity-analyst"
+      experience: "Freshers",
+      location: "Noida",
+      link: "https://hcltech.com/careers/customer-service-executive",
     },
     {
-      title: "Machine Learning Engineer",
-      company: "AI Frontiers",
+      title: "Voice Process Executive",
+      company: "Cognizant",
       type: "Full-time",
-      experience: "4+ years",
-      location: "Boston, MA",
-      link: "https://ai-frontiers.com/careers/machine-learning-engineer"
+      experience: "Freshers",
+      location: "Hyderabad",
+      link: "https://cognizant.com/careers/voice-process-executive",
     },
-
+    {
+      title: "Graduate Engineer Trainee",
+      company: "Emerson",
+      type: "Full-time",
+      experience: "Freshers",
+      location: "Pune",
+      link: "https://emerson.com/careers/graduate-engineer-trainee",
+    },
   ];
 }
 
@@ -84,7 +75,10 @@ export async function GET() {
     const jobs = await fetchJobsFromExternalAPI();
     return NextResponse.json(jobs);
   } catch (error) {
-    console.error('Error fetching jobs:', error);
-    return NextResponse.json({ error: 'Failed to fetch jobs' }, { status: 500 });
+    console.error("Error fetching jobs:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch jobs" },
+      { status: 500 }
+    );
   }
 }

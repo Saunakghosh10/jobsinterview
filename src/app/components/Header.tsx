@@ -22,9 +22,9 @@ export default function Header() {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme === "dark" ? (
-              <SunIcon className="h-5 w-5" />
+              <SunIcon className="h-5 w-5 text-black" />
             ) : (
-              <MoonIcon className="h-5 w-5" />
+              <MoonIcon className="h-5 w-5 text-black" />
             )}
           </Button>
         </nav>
